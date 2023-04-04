@@ -1,11 +1,17 @@
 import 'dart:html';
 
-import 'string.dart';
+
+final UListElement toDoList = querySelector('#to-do-list') as UListElement;
+final InputElement toDoInput = querySelector('#uname') as InputElement;
 
 void main() {
-  final heading = querySelector("#myH1")!;
-  heading.text = 'My Biography';
+  toDoInput.onChange.listen(addToDoItem);
+  final passwordElement = querySelector("#psw")!;
+  final button = querySelector("#btn")!;
+}
 
-  final ParagraphElement paragraphElement = querySelector("#paragraph") as ParagraphElement;
-  paragraphElement.text = Words.paragraph;
+void addToDoItem(Event e) {
+  final newToDo = LIElement()..text = toDoInput.value;
+  toDoInput.value = '';
+  toDoList.children.add(newToDo);
 }

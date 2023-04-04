@@ -7,12 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
     <title>My First Dart Web</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.dart.js"></script>
 </head>
 
 <body>
-  <h1 id = "myH1"></h1>
-  <p id = "paragraph"></p>
+  <form>
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input id = "uname" type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input id = "psw" type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button id = "btn" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+
+  <div>
+    <ul id="to-do-list">
+    </ul>
+  </div>
 </body>
 </html>
